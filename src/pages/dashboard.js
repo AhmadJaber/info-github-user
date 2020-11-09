@@ -1,5 +1,14 @@
 import React from "react";
+import { Navbar, SearchField, UserInfo, User, Repos } from "../components";
 
 export default function Dashboard() {
-  return <h3>Dashboard</h3>;
+  return (
+    <main>
+      <Navbar />
+      <SearchField />
+      <UserInfo />
+      <User />
+      <Repos />
+    </main>
+  );
 }

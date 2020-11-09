@@ -11,7 +11,15 @@
 [Styled-Components-docs](https://styled-components.com/)
 
 ```jsx
-import styled from "styled-components";
+// component.js - for styled-component
+import styled from "styled-components/macro"
+export const Wrapper = styled.htmlElement`
+write your styles here
+`
+
+// component-folder index.js
+import React from 'react';
+import { Wrapper } from './component.js';
 
 const ReactComponent = () => {
  // logic here
@@ -19,13 +27,9 @@ const ReactComponent = () => {
  {some content}
  </Wrapper>
 }
-
-
-const Wrapper = styled.htmlElement`
-write your styles here
-`
 export default ReactComponent
 ```
+
 ## React Icons
 
 [React Icons - Main Docs](https://react-icons.github.io/react-icons/)
