@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 
+// TODO: tweak the scrollbar-style
 export const Wrapper = styled.article`
   background: var(--clr-white);
   border-top-right-radius: var(--radius);

@@ -8,7 +8,7 @@ export default function Dashboard() {
       {/* <SearchField /> */}
       <UserInfo />
       <User />
-      {/* <Repos /> */}
+      <Repos />
     </main>
   );
 }
