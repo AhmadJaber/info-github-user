@@ -106,7 +106,7 @@ export const mockRepos = [
     svn_url: "https://github.com/AhmadJaber/Adopt-Me",
     homepage: null,
     size: 596,
-    stargazers_count: 0,
+    stargazers_count: 2,
     watchers_count: 0,
     language: "JavaScript",
     has_issues: true,
