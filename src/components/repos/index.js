@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GithubContext } from "../../context/context";
-import { Pie3D, Doughnut2D, Column3D } from "../charts";
+import { PieChart, DoughnutChart, ColumnChart, BarChart } from "../charts";
 import { Wrapper } from "./styles/repos";
 
 export default function Repos() {
@@ -49,6 +49,7 @@ export default function Repos() {
       const { stargazers_count, name, forks } = item;
 
       accumulator.stars[name] = { label: name, value: stargazers_count };
+      accumulator.forks[name] = { label: name, value: forks };
 
       return accumulator;
     },
@@ -58,29 +59,18 @@ export default function Repos() {
   stars = Object.values(stars)
     .sort((a, b) => b.value - a.value)
     .slice(0, 5);
-  console.log(stars);
 
-  const chartData = [
-    {
-      label: "HTML",
-      value: "90",
-    },
-    {
-      label: "CSS",
-      value: "260",
-    },
-    {
-      label: "JAVASCRIPT",
-      value: "380",
-    },
-  ];
+  forks = Object.values(forks)
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 5);
 
   return (
     <section className="section">
       <Wrapper className="section-center">
-        <Pie3D data={mostUsedlanguages} />
-        <Column3D data={stars} />
-        <Doughnut2D data={mostStarredLanguages} />
+        <PieChart data={mostUsedlanguages} />
+        <ColumnChart data={stars} />
+        <DoughnutChart data={mostStarredLanguages} />
+        <BarChart data={forks} />
       </Wrapper>
     </section>
   );

@@ -7,22 +7,21 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
-function Pie3D({ data }) {
+function ColumnChart({ data }) {
   const chartConfigs = {
-    type: "pie2d", // The chart type
+    type: "column2d", // The chart type
     width: "100%", // Width of the chart
     height: "400", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Languages",
+        caption: "Most Popular Repo",
         theme: "candy",
-        showPercentValues: 1,
-        decimals: 1,
-        useDataPlotColorForLabels: 1,
-        pieRadius: "45%",
-        enableSmartLabels: 0,
+        yAxisName: "Stars",
+        xAxisName: "Repos",
+        yAxisNameFontSize: "16px",
+        xAxisNameFontSize: "16px",
       },
       // Chart Data
       data,
@@ -32,4 +31,4 @@ function Pie3D({ data }) {
   return <ReactFC {...chartConfigs} />;
 }
 
-export default Pie3D;
+export default ColumnChart;
