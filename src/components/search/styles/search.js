@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;
+
     h3 {
       padding: 0 0.5rem;
     }

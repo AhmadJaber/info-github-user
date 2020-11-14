@@ -1,5 +1,6 @@
 import React from "react";
+import { Wrapper } from "./styles/navbar";
 
 export default function Navbar() {
-  return <h3>Navbar</h3>;
+  return <Wrapper>navbar</Wrapper>;
 }
