@@ -52,40 +52,39 @@ const GithubProvider = ({ children }) => {
     toggleError();
     setIsLoading(true);
 
-    try {
-      const response = await axios(`${URL}/users/${user}`);
-      console.log(response);
-
-      if (response) {
-        setGithubUser(response.data);
-        const { followers_url, repos_url } = response.data;
-
-        await Promise.allSettled([
-          axios(`${repos_url}?per_page=100`),
-          axios(`${followers_url}?per_page=100`),
-        ])
-          .then((response) => {
-            const [repos, followers] = response;
-            const status = "fulfilled";
-
-            if (repos.status === status) {
-              setGithubRepos(repos.value.data);
-            }
-
-            if (followers.status === status) {
-              setGithubFollowers(followers.value.data);
-            }
-          })
-          .catch(console.error);
-      } else {
-        toggleError(true, "there is no user with that username");
-      }
-
-      checkRequests();
-      setIsLoading(false);
-    } catch (error) {
+    const response = await axios(`${URL}/users/${user}`).catch((error) => {
+      console.log("async");
       console.error(error.message);
+    });
+
+    if (response) {
+      console.log("response", response);
+      setGithubUser(response.data);
+      const { followers_url, repos_url } = response.data;
+
+      await Promise.allSettled([
+        axios(`${repos_url}?per_page=100`),
+        axios(`${followers_url}?per_page=100`),
+      ])
+        .then((response) => {
+          const [repos, followers] = response;
+          const status = "fulfilled";
+
+          if (repos.status === status) {
+            setGithubRepos(repos.value.data);
+          }
+
+          if (followers.status === status) {
+            setGithubFollowers(followers.value.data);
+          }
+        })
+        .catch(console.error);
+    } else {
+      toggleError(true, "there is no user with that username");
     }
+
+    checkRequests();
+    setIsLoading(false);
   };
 
   useEffect(checkRequests, []);
