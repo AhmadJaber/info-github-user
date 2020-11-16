@@ -10,7 +10,7 @@ export default function Navbar() {
     isLoading,
     user,
   } = useAuth0();
-  console.log(user, isAuthenticated, isLoading);
+  console.log({ user, isAuthenticated, isLoading });
 
   const isUser = isAuthenticated && user;
 

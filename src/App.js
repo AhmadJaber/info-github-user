@@ -3,14 +3,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import { Dashboard, Login, Error } from "./pages";
+import { PrevateRoute } from "./components";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact>
+        <PrevateRoute path="/" exact>
           <Dashboard />
-        </Route>
+        </PrevateRoute>
         <Route path="/login" exact>
           <Login />
         </Route>
