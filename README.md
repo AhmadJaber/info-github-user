@@ -66,8 +66,9 @@ version used - "react-router-dom": "^5.2.0",
 - [Themes](https://www.fusioncharts.com/dev/themes/introduction-to-themes)
 
 ##### Auth0
+**Third party tool which provides authentication & authorization services to applications. It has extremely straight forward api & well documented.**
 
-- [Auth0 - Main Docs](https://auth0.com/)
+- [Auth0 - Main Docs](https://auth0.com/docs/)
 
 - Create Application
 - Choose : Single Page Web Applications
@@ -77,13 +78,14 @@ version used - "react-router-dom": "^5.2.0",
 - Add Domain -
   for now http://localhost:3000 (DON'T COPY PASTE FROM URL BAR)
 
-  - Allowed Callback URLs
-  - Allowed Logout URLs
-  - Allowed Web Origins
+  - Allowed Callback URLs (where auth0 will redirect after the user authentication).
+  - Allowed Logout URLs (where auth0 can return to after the user logged-out).
+  - Allowed Web Origins (we have to register application URL sothat the app can silently refresh the authentication tokens)
   - SAVE CHANGES!!!!!!!!!!!!!!!
 
 - Connections
-  email,social
+  database (email, password)
+  -
 
 - [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
 - [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
