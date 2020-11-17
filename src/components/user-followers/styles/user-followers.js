@@ -34,6 +34,25 @@ export const Wrapper = styled.article`
     padding: 1rem 2rem;
   }
 
+  .followers {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(185, 62%, 45%) hsl(213, 32%, 89%);
+  }
+
+  .followers::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .followers::-webkit-scrollbar-track {
+    background: hsl(213, 32%, 89%);
+  }
+
+  .followers::-webkit-scrollbar-thumb {
+    background-color: hsl(185, 62%, 45%);
+    border-radius: 20px;
+    border: 3px solid hsl(213, 32%, 89%);
+  }
+
   article {
     transition: var(--transition);
     padding: 0.15rem 0.5rem;
