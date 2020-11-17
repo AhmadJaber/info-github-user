@@ -3,23 +3,25 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import { Dashboard, Login, Error } from "./pages";
-import { PrevateRoute } from "./components";
+import { PrivateRoute, AuthWrapper } from "./components";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <PrevateRoute path="/" exact>
-          <Dashboard />
-        </PrevateRoute>
-        <Route path="/login" exact>
-          <Login />
-        </Route>
-        <Route path="*" exact>
-          <Error />
-        </Route>
-      </Switch>
-    </Router>
+    <AuthWrapper>
+      <Router>
+        <Switch>
+          <PrivateRoute path="/" exact>
+            <Dashboard />
+          </PrivateRoute>
+          <Route path="/login" exact>
+            <Login />
+          </Route>
+          <Route path="*" exact>
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
+    </AuthWrapper>
   );
 }
 
