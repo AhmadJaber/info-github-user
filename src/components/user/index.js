@@ -5,7 +5,7 @@ import UserFollowers from "../user-followers";
 
 export default function User() {
   return (
-    <section className="section">
+    <section className="section section--big">
       <Wrapper className="section-center">
         <UserCard />
         <UserFollowers />

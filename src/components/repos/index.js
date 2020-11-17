@@ -65,12 +65,20 @@ export default function Repos() {
     .slice(0, 5);
 
   return (
-    <section className="section">
+    <section className="section section--big">
       <Wrapper className="section-center">
-        <PieChart data={mostUsedlanguages} />
-        <ColumnChart data={stars} />
-        <DoughnutChart data={mostStarredLanguages} />
-        <BarChart data={forks} />
+        <div className="chart__wrapper">
+          <PieChart data={mostUsedlanguages} />
+        </div>
+        <div className="chart__wrapper">
+          <ColumnChart data={stars} />
+        </div>
+        <div className="chart__wrapper">
+          <DoughnutChart data={mostStarredLanguages} />
+        </div>
+        <div className="chart__wrapper">
+          <BarChart data={forks} />
+        </div>
       </Wrapper>
     </section>
   );

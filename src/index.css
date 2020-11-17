@@ -161,6 +161,10 @@ p {
   position: relative;
 }
 
+.section--big {
+  padding: 2rem 0;
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;

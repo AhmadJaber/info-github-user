@@ -42,7 +42,7 @@ export default function UserInfo() {
   ];
 
   return (
-    <section className="section">
+    <section className="section section--big">
       <Wrapper className="section-center">
         {userInfo.map((item) => (
           <InfoItem key={item.id} {...item} />
