@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
     column-gap: 3rem;
     align-items: center;
     box-shadow: var(--dark-shadow-2);
+    border: 1px solid rgba(72, 72, 72, 0.17);
 
     span {
       width: 3rem;

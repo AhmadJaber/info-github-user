@@ -202,6 +202,33 @@ p {
   }
 }
 
+.section__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.section__header h3 {
+  margin-bottom: 0;
+  color: var(--clr-heading-1);
+  font-size: 22px;
+}
+
+.section__header span {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #dd614a;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.section__header span .icon {
+  font-size: 1.25rem;
+}
+
 .breaker {
   box-sizing: border-box;
   height: 1px;

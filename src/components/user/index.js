@@ -6,10 +6,13 @@ import UserFollowers from "../user-followers";
 export default function User() {
   return (
     <section className="section section__padding--medium">
-      <Wrapper className="section-center">
-        <UserCard />
-        <UserFollowers />
-      </Wrapper>
+      <div className="section-center">
+        <Wrapper>
+          <UserCard />
+          <UserFollowers />
+        </Wrapper>
+        <hr className="breaker" />
+      </div>
     </section>
   );
 }

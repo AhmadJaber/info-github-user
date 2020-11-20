@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { GoRepo } from "react-icons/go";
 import { GithubContext } from "../../context/context";
 import { PieChart, DoughnutChart, ColumnChart, BarChart } from "../charts";
 import { Wrapper } from "./styles/repos";
@@ -65,21 +66,32 @@ export default function Repos() {
     .slice(0, 5);
 
   return (
-    <section className="section section--big">
-      <Wrapper className="section-center">
-        <div className="chart__wrapper">
-          <PieChart data={mostUsedlanguages} />
+    <section className="section section__padding--medium">
+      <div className="section-center">
+        <div className="section__header">
+          <span>
+            <GoRepo className="icon" />
+          </span>
+          <div>
+            <h3>Repo Info</h3>
+          </div>
         </div>
-        <div className="chart__wrapper">
-          <ColumnChart data={stars} />
-        </div>
-        <div className="chart__wrapper">
-          <DoughnutChart data={mostStarredLanguages} />
-        </div>
-        <div className="chart__wrapper">
-          <BarChart data={forks} />
-        </div>
-      </Wrapper>
+
+        <Wrapper>
+          <div className="chart__wrapper">
+            <PieChart data={mostUsedlanguages} />
+          </div>
+          <div className="chart__wrapper">
+            <ColumnChart data={stars} />
+          </div>
+          <div className="chart__wrapper">
+            <DoughnutChart data={mostStarredLanguages} />
+          </div>
+          <div className="chart__wrapper">
+            <BarChart data={forks} />
+          </div>
+        </Wrapper>
+      </div>
     </section>
   );
 }

@@ -17,11 +17,10 @@ function PieChart({ data }) {
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Languages Worked On",
-        captionFontColor: "#d2d2d2",
+        caption: "Repo Languages",
+        captionFontColor: "#fab73a",
         captionFontSize: "16px",
-        captionFont: "Roboto",
-        baseFont: "Roboto",
+        captionFont: "Open Sans",
         showShadow: 0,
         showPlotBorder: 0,
         showPercentValues: 1,
@@ -40,6 +39,8 @@ function PieChart({ data }) {
         tooltipBorderAlpha: "20",
         showToolTipShadow: "1",
         toolTipPadding: "7",
+        startingAngle: "90",
+        enableRotation: "0",
       },
       // Chart Data
       data,

@@ -1,8 +1,8 @@
 import styled from "styled-components/macro";
 
-// TODO: tweak the scrollbar-style
 export const Wrapper = styled.article`
-  background: var(--clr-white);
+  background: var(--clr-bg-3);
+  box-shadow: var(--dark-shadow-2);
   border-top-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
@@ -11,17 +11,21 @@ export const Wrapper = styled.article`
   &::before {
     content: " followers";
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     transform: translateY(-100%);
-    background: var(--clr-white);
-    color: var(--clr-grey-5);
     border-top-right-radius: var(--radius);
     border-top-left-radius: var(--radius);
     text-transform: capitalize;
     padding: 0.5rem 1rem 0 1rem;
     letter-spacing: var(--spacing);
     font-size: 1rem;
+    background: #282a2e;
+    color: var(--clr-heading-1);
+    box-shadow: var(--dark-shadow-2);
+    font-weight: 700;
+    font-family: var(--ff-secondary);
+    padding-bottom: 4px;
   }
 
   .followers {
@@ -31,26 +35,27 @@ export const Wrapper = styled.article`
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
     gap: 1.25rem 1rem;
-    padding: 1rem 2rem;
+    padding: 2rem;
+    padding-bottom: 0;
   }
 
   .followers {
     scrollbar-width: thin;
-    scrollbar-color: hsl(185, 62%, 45%) hsl(213, 32%, 89%);
+    scrollbar-color: var(--clr-heading-1) var(--clr-bg-3);
   }
 
   .followers::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
   }
 
   .followers::-webkit-scrollbar-track {
-    background: hsl(213, 32%, 89%);
+    background: var(--clr-bg-3);
   }
 
   .followers::-webkit-scrollbar-thumb {
-    background-color: hsl(185, 62%, 45%);
+    background-color: var(--clr-heading-1);
     border-radius: 20px;
-    border: 3px solid hsl(213, 32%, 89%);
+    border: 3px solid var(--clr-bg-3);
   }
 
   article {
@@ -70,11 +75,14 @@ export const Wrapper = styled.article`
     }
 
     h4 {
-      margin-bottom: 0;
+      font-weight: 400;
+      color: var(--clr-heading-2);
+      margin-bottom: 0.1rem;
     }
 
     a {
-      color: var(--clr-grey-5);
+      color: #44af69;
+      opacity: 0.7;
     }
   }
 `;
