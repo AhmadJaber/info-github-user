@@ -8,12 +8,13 @@ export const Wrapper = styled.article`
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   position: relative;
+  border: 1px solid rgba(72, 72, 72, 0.17);
 
   &::before {
     content: "user";
     position: absolute;
-    top: -1px;
-    left: 0;
+    top: -2px;
+    left: -1px;
     transform: translateY(-100%);
     border-top-right-radius: var(--radius);
     border-top-left-radius: var(--radius);
