@@ -17,7 +17,7 @@ function PieChart({ data }) {
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Repo Languages",
+        caption: "Used Languages",
         captionFontColor: "#fab73a",
         captionFontSize: "16px",
         captionFont: "Open Sans",
@@ -33,12 +33,13 @@ function PieChart({ data }) {
         canvasBgColor: "#282A2E",
         plotBorderalpha: "0",
         showlegend: "0",
-        toolTipBgColor: "#525357",
+        toolTipBgcolor: "#484E69",
         toolTipColor: "#F8F8F8",
         toolTipBorderColor: "#525357",
-        tooltipBorderAlpha: "20",
+        tooltipBorderAlpha: "30",
         showToolTipShadow: "1",
         toolTipPadding: "7",
+        toolTipBorderRadius: "3",
         startingAngle: "90",
         enableRotation: "0",
       },
