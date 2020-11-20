@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
       line-height: 35px;
       font-weight: 700;
       font-size: 30px;
-      padding: 0.5rem 0 0.25rem;
+      padding: 0.25rem 0;
     }
 
     p {
@@ -46,26 +46,27 @@ export const Wrapper = styled.div`
       color: var(--clr-heading-2);
       font-size: 14px;
       letter-spacing: 1px;
+      padding-bottom: 0.25rem;
     }
 
     .pink {
-      background: #ffe0f0;
-      color: #da4a91;
+      background: #dd614a;
+      color: #fff;
     }
 
     .green {
-      background: var(--clr-primary-10);
-      color: var(--clr-primary-5);
+      background: #44af69;
+      color: #fff;
     }
 
     .purple {
-      background: #e6e6ff;
-      color: #5d55fa;
+      background: #6957da;
+      color: #fff;
     }
 
     .yellow {
-      background: #fffbea;
-      color: #f0b429;
+      background: #c79e24;
+      color: #fff;
     }
   }
 `;
