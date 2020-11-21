@@ -1,5 +1,8 @@
 ### info-github-user
-**A app with detailed information of a github user with fusion-charts, authentication and more**
+A app with detailed information of a github user with fusion-charts, Auth0, styled-components, react-router-dom. Main
+purpose of this app is to try & get very good at using `fusion-chart`, `Auth0`, `css-grid`. Read below the preview to know about the technology i used in this app.
+
+![Preview](app-preview.png?raw=true)
 
 ### Technologies
 ##### React
