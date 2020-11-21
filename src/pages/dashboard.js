@@ -1,5 +1,12 @@
 import React, { useContext } from "react";
-import { Navbar, SearchField, UserInfo, User, Repos } from "../components";
+import {
+  Navbar,
+  SearchField,
+  UserInfo,
+  User,
+  Repos,
+  Footer,
+} from "../components";
 import { GithubContext } from "../context/context";
 import loaderGif from "../images/preloader.gif";
 
@@ -23,6 +30,7 @@ export default function Dashboard() {
       <UserInfo />
       <User />
       <Repos />
+      <Footer />
     </main>
   );
 }

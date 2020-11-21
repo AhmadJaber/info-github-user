@@ -42,7 +42,7 @@ function DoughnutChart({ data }) {
         bgcolor: "#282A2E",
         centerLabel: "$label<br>$value",
         centerLabelBold: "1",
-        centerLabelFontSize: "18",
+        centerLabelFontSize: "16",
         centerLabelColor: "#d2d2d2",
         enableRotation: "0",
         showHoverEffect: 0,

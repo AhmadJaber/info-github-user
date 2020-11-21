@@ -5,3 +5,4 @@ export { default as SearchField } from "./search";
 export { default as User } from "./user";
 export { default as PrivateRoute } from "./private-route/privateRoute";
 export { default as AuthWrapper } from "./auth-wrapper";
+export { default as Footer } from "./footer";

@@ -91,6 +91,8 @@ export default function Repos() {
             <BarChart data={forks} />
           </div>
         </Wrapper>
+
+        <hr className="breaker" />
       </div>
     </section>
   );
