@@ -1,16 +1,13 @@
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import { mockUser } from "./MockData/mockUser";
-import { mockRepos } from "./MockData/mockRepos";
-import { mockFollowers } from "./MockData/mockFollowers";
 import { URL } from "../constants/url";
 
 const GithubContext = createContext();
 
 const GithubProvider = ({ children }) => {
-  const [githubUser, setGithubUser] = useState(mockUser);
-  const [githubRepos, setGithubRepos] = useState(mockRepos);
-  const [githubFollowers, setGithubFollowers] = useState(mockFollowers);
+  const [githubUser, setGithubUser] = useState([]);
+  const [githubRepos, setGithubRepos] = useState([]);
+  const [githubFollowers, setGithubFollowers] = useState([]);
 
   // handle request count
   const [requests, setRequests] = useState(0);
@@ -30,7 +27,6 @@ const GithubProvider = ({ children }) => {
         } = data;
 
         setRequests(remaining);
-
         // if remaining is zero, show a error message
         if (remaining === 0) {
           toggleError(
@@ -88,6 +84,10 @@ const GithubProvider = ({ children }) => {
   };
 
   useEffect(checkRequests, []);
+  useEffect(() => {
+    searchGithubUser("ahmadjaber");
+    console.log("runnig");
+  }, []);
 
   return (
     <GithubContext.Provider

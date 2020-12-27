@@ -1,10 +1,12 @@
 ### info-github-user
+
 A app with detailed information of a github user with fusion-charts, Auth0, styled-components, react-router-dom. Main
 purpose of this app is to try & get very good at using `fusion-chart`, `Auth0`, `css-grid`. Read below the preview to know about the technology i used in this app.
 
 ![Preview](app-preview.png?raw=true)
 
 ### Technologies
+
 ##### React
 
 [react-docs](https://reactjs.org/docs/getting-started.html)
@@ -38,8 +40,8 @@ export default ReactComponent
 [React Icons - Main Docs](https://react-icons.github.io/react-icons/)
 
 ```jsx
-import { FiUsers, FiUserPlus } from 'react-icons/fi';
-<FiUsers className='nameOfTheClass'> </FiUsers>;
+import { FiUsers, FiUserPlus } from "react-icons/fi";
+<FiUsers className="nameOfTheClass"> </FiUsers>;
 ```
 
 ##### React Router Dom
@@ -69,6 +71,7 @@ version used - "react-router-dom": "^5.2.0",
 - [Themes](https://www.fusioncharts.com/dev/themes/introduction-to-themes)
 
 ##### Auth0
+
 **Third party tool which provides authentication & authorization services to applications. It has extremely straight forward api & well documented.**
 
 - [Auth0 - Main Docs](https://auth0.com/docs/)
@@ -88,7 +91,8 @@ version used - "react-router-dom": "^5.2.0",
 
 - Connections
   database (email, password)
-  -
+
+## _how to get google auth credentials cient id and client secret_
 
 - [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
 - [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
@@ -98,4 +102,5 @@ version used - "react-router-dom": "^5.2.0",
 [Netlify](https://www.netlify.com/)
 
 ##### Idea & inspiration
+
 [John Smilga](https://github.com/john-smilga)

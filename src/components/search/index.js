@@ -38,7 +38,7 @@ export default function SearchField() {
             <input
               type="text"
               value={user}
-              placeholder="search for github user"
+              placeholder="e.g. jlengstorf"
               onChange={(event) => setUser(event.target.value)}
             />
             {requests > 0 && !isLoading && (
