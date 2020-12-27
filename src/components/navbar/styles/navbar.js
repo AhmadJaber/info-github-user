@@ -24,12 +24,19 @@ export const Wrapper = styled.nav`
   }
 
   button {
-    background: transparent;
+    border-radius: 5px;
+    background: var(--clr-bg-3);
+    padding: 0.25rem 0.5rem;
     border: transparent;
     font-size: 1.2rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    color: var(--clr-heading-1);
+    transition: var(--transition);
     cursor: pointer;
+    &:hover {
+      background: var(--clr-bg-1);
+      color: var(--clr-heading-1);
+    }
   }
 `;

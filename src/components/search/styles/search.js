@@ -34,7 +34,6 @@ export const Wrapper = styled.div`
 
     input::placeholder {
       color: var(--clr-grey-5);
-      text-transform: capitalize;
       letter-spacing: var(--spacing);
     }
 
