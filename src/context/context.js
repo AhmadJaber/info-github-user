@@ -87,6 +87,7 @@ const GithubProvider = ({ children }) => {
   useEffect(() => {
     searchGithubUser("ahmadjaber");
     console.log("runnig");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
